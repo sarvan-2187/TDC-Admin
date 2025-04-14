@@ -38,24 +38,6 @@
             const searchBtn = document.getElementById('search-btn');
             const notification = document.getElementById('notification');
 
-            // Sample order for demonstration
-            const sampleOrder = {
-                id: 7,
-                email: 'e2sarvankumar@gmail.com',
-                name: 'Sarvan',
-                product: 'Rose Milk Powder',
-                address: 'Anna Nagar Chennai',
-                created_at: new Date().toISOString(),
-                phone: '7330673881',
-                basePrice: 100,
-                gst: 18,
-                totalPrice: 118,
-                paymentMethod: 'UPI',
-                isLocationValid: true,
-                latitude: 13.0843007,
-                longitude: 80.2704622,
-                status: 'new'
-            };
 
             // Global variables
             let orders = [];
@@ -792,6 +774,23 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-light);
+        }
+
     </style>
 </head>
 <body>
@@ -801,8 +800,12 @@
                 <div class="logo-icon">TDC</div>
                 <div class="logo-text">
                     <h1>Tanjore Degree Coffee</h1>
-                    <p>Admin Dashboard</p>
+                    <p>Order Management</p>
                 </div>
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html" class="nav-link">Orders Dashboard</a>
+                <a href="contact-queries.html" class="nav-link">Contact Queries</a>
             </div>
             <div class="search-bar">
                 <input type="text" id="search-input" placeholder="Search order by ID...">
